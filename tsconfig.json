@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./lib/",
      "moduleResolution": "node",
      "module": "commonjs",
     "declaration": true,

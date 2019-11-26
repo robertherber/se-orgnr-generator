@@ -1,12 +1,16 @@
 {
   "name": "se-orgnr-generator",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
+  "description": "Supersimple dependency-free library for generation Swedish organization numbers with TypeScript bindings",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
+    "prepublishOnly" : "yarn test && yarn lint",
+    "prepare" : "yarn build"
   },
   "devDependencies": {
     "@babel/parser": "^7.7.4",
