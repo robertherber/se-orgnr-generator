@@ -5,6 +5,17 @@
   "license": "MIT",
   "description": "Supersimple dependency-free library for generation Swedish organization numbers with TypeScript bindings",
   "types": "lib/index.d.ts",
+  "keywords": ["generator", "swedish", "organization", "company"],
+  "author": {
+    "email": "robert@herber.me",
+    "name": "Robert Herber",
+    "url": "https://github.com/robertherber"
+  },
+  "bugs": { 
+    "url" : "https://github.com/robertherber/se-orgnr-generator/issues",
+    "email" : "robert@herber.me"
+  },
+  "homepage": "https://github.com/robertherber/se-orgnr-generator#readme",
   "scripts": {
     "test": "jest",
     "build": "tsc",
