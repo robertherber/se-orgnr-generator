@@ -9,13 +9,14 @@
     "test": "jest",
     "build": "tsc",
     "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
-    "prepublishOnly" : "yarn test && yarn lint",
-    "prepare" : "yarn build"
+    "prepublishOnly": "yarn test && yarn lint",
+    "prepare": "yarn build"
   },
   "devDependencies": {
     "@babel/parser": "^7.7.4",
     "@babel/types": "^7.7.4",
     "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
     "babel-eslint": "^10.0.3",
@@ -26,6 +27,7 @@
     "jest": "^24.9.0",
     "jest-diff": "^24.9.0",
     "prettier": "^1.19.1",
+    "se-orgnr-validator": "^1.0.3",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.2"
   }

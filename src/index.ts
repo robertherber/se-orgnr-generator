@@ -1,4 +1,5 @@
 const POSSIBLE_NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+  POSSIBLE_THIRD_NUMBER = ['2', '3', '4', '5', '6', '7', '8', '9'],
   VALID_CLASS_NUMBERS = ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
   CHARCODE_0 = '0'.charCodeAt(0),
   VALID_LENGTHS = [10, 12],
@@ -57,7 +58,7 @@ const generateOrganizationNumber = ({
   const orgNrArray = [classNumberString];
 
   for (let i = 0; i < 8; i++) {
-    const nextNumber = getRandomFromArray(POSSIBLE_NUMBERS);
+    const nextNumber = getRandomFromArray(i === 1 ? POSSIBLE_THIRD_NUMBER : POSSIBLE_NUMBERS);
     orgNrArray.push(nextNumber);
   }
 

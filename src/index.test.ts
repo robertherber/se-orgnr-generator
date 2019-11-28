@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
-
 import generateOrganizationNumber from '.';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const isValid = require('se-orgnr-validator');
 
 describe('se-orgnr-generator', () => {
   it('Should generate a string of length 10', () => {
@@ -46,6 +48,22 @@ describe('se-orgnr-generator', () => {
     const number = generateOrganizationNumber({ classNumber: '6' });
 
     expect(number[0]).toEqual('6');
+  });
+
+  it('Should not be confusable with months', () => {
+    for (let index = 0; index < 100000; index++) {
+      const number = generateOrganizationNumber();
+
+      expect(parseInt(number[2])).toBeGreaterThanOrEqual(2);
+    }
+  });
+
+  it('Should be valid', () => {
+    for (let index = 0; index < 100000; index++) {
+      const number = generateOrganizationNumber();
+
+      expect(isValid(number)).toBeTruthy();
+    }
   });
 
   it('Should have a separator', () => {
