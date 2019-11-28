@@ -1,6 +1,6 @@
 {
   "name": "se-orgnr-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "license": "MIT",
   "description": "Supersimple dependency-free library for generation Swedish organization numbers with TypeScript bindings",
